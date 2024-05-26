@@ -1,0 +1,14 @@
+<form method="GET" action="{% url 'search' %}">
+   <input type="text" name="author_lastname" placeholder="Prezime autora">
+   <button type="submit">Search by author</button>
+</form>
+
+<form method="GET" action="{% url 'search_by_title' %}">
+   <input type="text" name="work_title" placeholder="Naslov rada">
+   <button type="submit">Search by title</button>
+</form>
+
+<form method="GET" action="{% url 'search_by_participant' %}">
+   <input type="text" name="participant_name" placeholder="Participant Name">
+   <button type="submit">Search by Participant</button>
+</form>

@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popis radova</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Popis radova</h1>
+    {% include 'search_form.html' %}
+    <ul>
+        {% for work in works %}
+            <li>{{ work.title }} - {{ work.authors }} ({{ work.year_of_publication }})</li>
+        {% empty %}
+            <li>Nema rezultata</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Back to conferences</a>
+</body>
+</html>

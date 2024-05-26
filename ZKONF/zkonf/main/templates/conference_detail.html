@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ conference.name }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>{{ conference.name }}</h1>
+    <h2>Presentations</h2>
+    <ul>
+    {% for presentation in presentations %}
+        
+        <li>
+            {{ presentation.location }}, {{ presentation.time }}
+            <a href="{% url 'scientific_work_detail' work_id=presentation.scientificwork.id %}"> {{ presentation.scientificwork.title }}</a> 
+        </li>
+        <p></p>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Back to conferences</a>
+</body>
+</html>

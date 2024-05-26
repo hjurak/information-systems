@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Participant</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Are you sure you want to delete {{ participant.first_name }} {{ participant.last_name }}?</h1>
+    <form method="POST" action="{% url 'participant_delete' participant.id %}" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+        <a href="{% url 'participant_list' %}">Cancel</a>
+    </form>
+</body>
+</html>

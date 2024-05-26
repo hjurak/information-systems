@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ work.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    
+</head>
+<body>
+    <h1>{{ work.title }}</h1>
+    <p><strong>Authors:</strong> {{ work.authors }}</p>
+    <p><strong>Year of Publication:</strong> {{ work.year_of_publication }}</p>
+    <p><strong>Areas:</strong> 
+        {% for area in work.areas.all %}
+            {{ area.name }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    <p><strong>Participants:</strong>
+        {% for participant in work.participants.all %}
+            <a href="{% url 'participant_detail' participant_id=participant.id %}">
+                {{ participant.first_name }} {{ participant.last_name }}
+            </a>{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+</body>
+</html>

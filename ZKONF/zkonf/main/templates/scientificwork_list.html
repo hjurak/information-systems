@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scientific Works</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Scientific Works</h1>
+    <ul>
+        {% for work in scientificworks %}
+            <li>
+                <a href="{% url 'scientificwork_detail' work.id %}">{{ work.title }}</a>
+                <button onclick="window.location='{% url 'scientificwork_update' work.id %}'">Edit</button>
+                <button onclick="if(confirm('Are you sure you want to delete this item?')) { window.location='{% url 'scientificwork_delete' work.id %}' }">Delete</button>
+            </li>
+            
+        {% endfor %}
+    </ul>
+    <a href="{% url 'scientificwork_create' %}">Create New Scientific Work</a> <br>
+    <a href="{% url 'index' %}">Back to conferences</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Scientific Work</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Are you sure you want to delete {{ scientificwork.title }}?</h1>
+    <form method="POST" action="{% url 'scientificwork_delete' scientificwork.id %}" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+    </form>
+    <a href="{% url 'scientificwork_list' %}">Cancel</a>
+</body>
+</html>

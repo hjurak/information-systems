@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ scientificwork.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>{{ scientificwork.title }}</h1>
+    <p><strong>Authors:</strong> {{ scientificwork.authors }}</p>
+    <p><strong>Year of Publication:</strong> {{ scientificwork.year_of_publication }}</p>
+    <p><strong>Areas:</strong>
+        <ul>
+            {% for area in scientificwork.areas.all %}
+                <li>{{ area.name }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+    <a href="{% url 'scientificwork_list' %}">Back to Scientific Work List</a>
+</body>
+</html>
