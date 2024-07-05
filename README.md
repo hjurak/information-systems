@@ -1,16 +1,17 @@
-**Projekt u sklopu kolegija Informacijski sustavi, FER.**
+**Project as part of the Information Systems course, Faculty of Electrical Engineering and Computing (FER).**
 
 
-**Opis projekta**: 
-ZKONF je web aplikacija razvijena u Django frameworku koja omogućava organizaciju i upravljanje konferencijama. 
-Projekt pruža mogućnosti za unos i pretraživanje znanstvenih radova, upravljanje sudionicima i organizatorima, te prikaz detalja o konferencijama. 
-Aplikacija je dizajnirana kako bi olakšala proces organizacije znanstvenih događaja, osiguravajući efikasno upravljanje informacijama i sudionicima.
+**Project Description:**
 
-**Upute za pokretanje:**
-Kloniranje projekta s repozitorija
-Pokretanje migracije: python manage.py migrate
-Punjenje baze podataka: python manage.py seed_db
-Pokretanje servera: python manage.py runserver
-Pokretanje web preglednika i pristup adresi http://localhost:8000/
+ZKONF is a web application developed using the Django framework that facilitates the organization and management of conferences. The project provides features for entering and searching scientific papers, managing participants and organizers, and displaying conference details. The application is designed to streamline the organization process of scientific events, ensuring efficient management of information and participants.
 
-Potrebna instalacija programskog jezika Python i paketa Django.
+
+**Instructions for Running the Project:**
+
+Clone the project from the repository.
+Run the migration: python manage.py migrate
+Seed the database: python manage.py seed_db
+Start the server: python manage.py runserver
+Open a web browser and navigate to http://localhost:8000/
+
+Note: Installation of the Python programming language and the Django package is required.
