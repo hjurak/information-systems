@@ -1,11 +1,12 @@
 **Project as part of the Information Systems course, Faculty of Electrical Engineering and Computing (FER).**
 
 
-##Project Description:
+**Project Description:**
 
 ZKONF is a web application developed using the Django framework.
 The project provides features for managing scientific research and conferences.
 The application is designed to streamline the organization process of scientific events, ensuring efficient management of information and participants.
+
 
 
 **Instructions for Running the Project:**
