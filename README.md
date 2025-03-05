@@ -2,6 +2,7 @@
 
 ## Faculty of Electrical Engineering and Computing (FER)  
 ### Course: Information Systems  
+**Authors:** Hana Jurak
 
 ---
 
