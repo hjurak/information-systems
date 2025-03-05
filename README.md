@@ -1,4 +1,4 @@
-**Project as part of the Information Systems course, Faculty of Electrical Engineering and Computing (FER).**
+#Project as part of the Information Systems course, Faculty of Electrical Engineering and Computing (FER)
 
 
 **Project Description:**
