@@ -1,6 +1,6 @@
 # ZKONF - Scientific Conference Management System
 
-## Faculty of Electrical Engineering and Computing (FER)  
+## Faculty of Electrical Engineering and Computing (FER), University of Zagreb  
 ### Course: Information Systems  
 **Authors:** Hana Jurak
 
